@@ -22,6 +22,11 @@ USE DATABASE test;
 
 ## Create TABLE
 
+Example:
+```SQL
+create table customers (id INTEGER not null, email VARCHAR(255), active BOOLEAN default true);
+```
+
 * [CREATE TABLE](https://www.w3schools.com/mysql/mysql_create_table.asp)
 * [ALTER TABLE](https://www.w3schools.com/mysql/mysql_alter.asp)
 * [Constraints](https://www.w3schools.com/mysql/mysql_constraints.asp)
@@ -40,11 +45,6 @@ USE DATABASE test;
 * `TIMESTAMP` - A timestamp. Format: 'YYYY-MM-DD hh:mm:ss'. Example: '1970-01-01 00:00:00'.
 
 More in [MySQL Data Types documentation](https://www.w3schools.com/mysql/mysql_datatypes.asp).
-
-Example:
-```SQL
-create table customers (id INTEGER not null, email VARCHAR(255), active BOOLEAN default true);
-```
 
 ## CRUD - Create, read, update and delete
 
@@ -65,21 +65,11 @@ UPDATE customers SET active = FALSE WHERE id = 1;
 DELETE FROM customers WHERE id = 1;
 ```
 
-## JOIN
+## Exercises
 
-Here are the different types of the JOINs in SQL:
-
-* `(INNER) JOIN`: Returns records that have matching values in both tables
-* `LEFT (OUTER) JOIN`: Returns all records from the left table, and the matched records from the right table
-* `RIGHT (OUTER) JOIN`: Returns all records from the right table, and the matched records from the left table
-* `FULL (OUTER) JOIN`: Returns all records when there is a match in either left or right table
-
-![Different Types of SQL JOINs](./images/joins.png)
-
-### INNER JOIN
-
-Documentation in [SQL INNER JOIN Keyword](https://www.w3schools.com/sql/sql_join_inner.asp).
-
-### LEFT JOIN
-
-Documentation in [SQL LEFT JOIN Keyword](https://www.w3schools.com/sql/sql_join_left.asp).
+1. `SELECT` all roles.
+2. Create 3 new users in one `INSERT` command.
+3. `SELECT` 2 users their first name starts with letter 'L'.
+4. Create new table `user_address` with cardinality 1:1 to `users`. Columns are: street, city, state, 
+5. Delete all users with Gmail account (their email ends with `@gmail.com`).
+6. Set all users active (`UPDATE`).

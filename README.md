@@ -32,7 +32,9 @@ To destroy all running docker containers use:
 
 ## Lectures
 
-1. [Introduction to MYSQL](docs/1-introduction_to_mysql.md)
+1. [Introduction to MYSQL](./docs/1-introduction_to_mysql.md)
+2. [Entity–relationship model](./docs/2-entity_relationship_model.md)
+3. [JOINs](./docs/3-join.md)
 
 Copyright and License Information
 ---------------------------------
