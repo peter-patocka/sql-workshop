@@ -1,8 +1,8 @@
 # Introduction to MySQL
 
-Connect to phpmyadmin
-    * localhost [http://5trzalka.piixon.sk/phpmyadmin/](http://5trzalka.piixon.sk/phpmyadmin/)
-    * live version [http://5trzalka.piixon.sk/phpmyadmin/](http://5trzalka.piixon.sk/phpmyadmin/)
+Connect to phpmyadmin via
+* localhost [http://localhost:8000](http://localhost:8000)
+* live version [http://5trzalka.piixon.sk/phpmyadmin/](http://5trzalka.piixon.sk/phpmyadmin/)
 
 ## Create USER
 
@@ -69,15 +69,12 @@ DELETE FROM customers WHERE id = 1;
 
 Here are the different types of the JOINs in SQL:
 
-* (INNER) JOIN: Returns records that have matching values in both tables
-* LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table
-* RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
-* FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
+* `(INNER) JOIN`: Returns records that have matching values in both tables
+* `LEFT (OUTER) JOIN`: Returns all records from the left table, and the matched records from the right table
+* `RIGHT (OUTER) JOIN`: Returns all records from the right table, and the matched records from the left table
+* `FULL (OUTER) JOIN`: Returns all records when there is a match in either left or right table
 
-![INNER JOIN](https://www.w3schools.com/sql/img_innerjoin.gif)
-![LEFT JOIN](https://www.w3schools.com/sql/img_leftjoin.gif)
-![RIGHT JOIN](https://www.w3schools.com/sql/img_rightjoin.gif)
-![FULL JOIN](https://www.w3schools.com/sql/img_fulljoin.gif)
+![Different Types of SQL JOINs](./images/joins.png)
 
 ### INNER JOIN
 
