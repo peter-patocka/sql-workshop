@@ -4,6 +4,44 @@ Connect to phpmyadmin via
 * localhost [http://localhost:8000](http://localhost:8000)
 * live version [http://5trzalka.piixon.sk/phpmyadmin/](http://5trzalka.piixon.sk/phpmyadmin/)
 
+Example:
+```
+Luke Skywalker kúpil 04.10.2022 modrý svetelný meč za 1200 EUR
+```
+### How to store this example to database:
+
+| id  | first_name | last_name | product_name    | price | date       |
+| --- | ---        | ---       | ---             | ---   | ---        |
+| 1   | Luke       | Skywalker | Blue Lightsaber | 1200  | 04.10.2022 |
+
+### How is this example actually stored (in normalized form) in database:
+
+#### Table `users`:
+| id  | first_name | last_name |
+| --- | ---        | ---       | 
+| 1   | Luke       | Skywalker | 
+
+#### Table `products`:
+| id  | name            | regular_price |
+| --- | ---             | ---           |
+| 1   | Blue Lightsaber | 1200          |
+
+#### Table `sales_order`:
+| id  | user_id | total |
+| --- | ---     | ---   |
+| 1   | 1       | 1200  |
+
+#### Table `order_products`:
+| id  | order_id | product_id | price |
+| --- | ---      | ---        | ---   |
+| 1   | 1        | 1          | 1200  |
+
+Another examples could be:
+```
+Darth Vader s emailovou adresou darth.vader@gmail.com kúpil 03.10.2022 červený svetelný meč za zľavnenú sumu 1500 EUR
+Obi-wan Kenobi bol povýšený na Jedi Mastera
+```
+
 ## Create USER
 
 ```SQL
@@ -52,14 +90,17 @@ More in [MySQL Data Types documentation](https://www.w3schools.com/mysql/mysql_d
 ```sql
 INSERT INTO customers (id, email, active) VALUES (1, 'test@gmail.com', TRUE);
 ```
+
 * To read data we use `SELECT * FROM` command
 ```sql
 SELECT * FROM customers WHERE id > 0 AND active IN(TRUE, FALSE);
 ```
+
 * To update data we use `UPDATE` command
 ```sql
 UPDATE customers SET active = FALSE WHERE id = 1;
 ```
+
 * To delete data we use `DELETE FROM` command
 ```sql
 DELETE FROM customers WHERE id = 1;
