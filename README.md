@@ -34,7 +34,21 @@ To destroy all running docker containers use:
 
 1. [Introduction to MYSQL](./docs/1-introduction_to_mysql.md)
 2. [Entity–relationship model](./docs/2-entity_relationship_model.md)
-3. [JOINs](./docs/3-join.md)
+3. [Database normalization](docs/3-database-normalization.md)
+4. [JOINs](docs/4-join.md)
+5. [Triggers, Views, Procedures](docs/5-triggers-views-procedures.md)
+
+---
+
+Other topics (not covered yet):
+* [Database Testing](https://www.javatpoint.com/database-testing)
+* [NoSQL Databases](https://www.couchbase.com/resources/why-nosql)
+* Database servers differences
+    * [PostgreSQL vs. MySQL](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-vs-mysql/)
+    * [Oracle vs. PostgreSQL](https://hevodata.com/learn/postgresql-vs-oracle/#functionality)
+    * [Comparison MySQL vs. Oracle vs. PostgreSQL](https://db-engines.com/en/system/MySQL%3BOracle%3BPostgreSQL)
+* [Database Modeling in UML](https://sparxsystems.com/resources/tutorials/uml/datamodel.html)
+* [Database Migration - What It Is and How to Do It](https://www.cloudbees.com/blog/database-migration)
 
 Copyright and License Information
 ---------------------------------
