@@ -18,6 +18,8 @@ To start MYSQL database server in docker container, use:
 ./run.sh up
 ```
 
+If you do not have a permission to execute file run `chmod +x run.sh`.
+
 All `./db/updates/*.sql` files are applied to initial database `dbname` (defined by environment variable `MYSQL_DATABASE`).
 
 To edit data, use [phpmyadmin](http://localhost:8000/) with user name `username` and password `password`.
