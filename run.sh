@@ -12,6 +12,9 @@ case $1 in
   'clean_cache')
     docker volume rm $(docker volume ls -q)
     ;;
+  'test')
+    docker run --rm -it $(docker build -q -f server-test.Dockerfile .)
+    ;;
   *)
   echo "Invalid command"
     ;;
