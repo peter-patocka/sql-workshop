@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SQL data generator</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script>
+        function toDbTime(date) {
+            return date.toISOString().slice(0, 19).replace('T', ' ');
+        }
+        function getRandomNumber(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script>
+</head>
+<body>
+    <div id="sql"></div>
+
+<script>
+    // categories
+
+    // order_products
+
+    // products
+    $("#sql").append('INSERT INTO `products` (`id`, `name`, `description`, `product_status_id`, `regular_price`, `discount_price`, `quantity`, `taxable`) VALUES <br>');
+    for(let i = 0; i < 10; i++) {
+        $("#sql").append(`(${i}, 'Lightsaber ${i}', 'Some example text', NULL, '${1000-i}', NULL, 1, 1)`);
+        $("#sql").append(i == (10 - 1) ? ";<br><br>" : ",<br>");
+    }
+
+    // product_categories
+
+    // product_tags
+
+    // roles
+
+    // sales_orders
+
+    // tags
+
+    // user_roles
+
+    // users
+    $("#sql").append('INSERT INTO `users` (`id`, `email`, `first_name`, `last_name`, `active`, `inserted_at`, `updated_at`) VALUES <br>');
+    for(let i = 0; i < 100; i++) {
+        const email = `user${i}@gmail.com`;
+        const date = new Date(2022,0,1+i,13,14,15);
+        $("#sql").append(`(${i}, '${email}', 'Name${i}', 'Surname${i}', ${getRandomNumber(0,1)}, '${toDbTime(date)}', '${toDbTime(date)}')`);
+        $("#sql").append(i == (100 - 1) ? ";<br><br>" : ",<br>");
+    }
+</script>
+</body>
+</html>
