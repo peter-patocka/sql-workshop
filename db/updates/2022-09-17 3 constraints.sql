@@ -18,7 +18,11 @@ alter table order_products add constraint fk_order_products__sales_order
     foreign key (order_id)
     references sales_orders (id) ;
 
-alter table order_products add constraint fk_order_products__
+alter table order_products add constraint fk_order_products__product_id
     foreign key (product_id)
     references products (id) ;
+
+alter table products add constraint fk_products__product_status_id
+    foreign key (product_status_id)
+    references product_statuses (id) ;
 
