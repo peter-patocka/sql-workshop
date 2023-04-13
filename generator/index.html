@@ -44,12 +44,12 @@
     // user_roles
 
     // users
-    $("#sql").append('INSERT INTO `users` (`id`, `email`, `first_name`, `last_name`, `active`, `inserted_at`, `updated_at`) VALUES <br>');
-    for(let i = 0; i < 100; i++) {
+    $("#sql").append('INSERT INTO users (id,email,first_name,last_name,inserted_at,updated_at) VALUES <br>');
+    for(let i = 7; i <= 100; i++) {
         const email = `user${i}@gmail.com`;
         const date = new Date(2022,0,1+i,13,14,15);
-        $("#sql").append(`(${i}, '${email}', 'Name${i}', 'Surname${i}', ${getRandomNumber(0,1)}, '${toDbTime(date)}', '${toDbTime(date)}')`);
-        $("#sql").append(i == (100 - 1) ? ";<br><br>" : ",<br>");
+        $("#sql").append(`(${i}, '${email}', 'Name${i}', 'Surname${i}', '${toDbTime(date)}', '${toDbTime(date)}')`);
+        $("#sql").append(i == (100) ? ";<br><br>" : ",<br>");
     }
 </script>
 </body>
