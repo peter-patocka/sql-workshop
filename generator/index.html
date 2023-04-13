@@ -21,6 +21,11 @@
 
 <script>
     // categories
+    $("#sql").append('Insert INTO categories (id, name, parent_id, inserted_at, updated_at) values <br>');
+    for(let i = 1; i <= 100; i++) {
+        $("#sql").append(`(${i}, 'Swords ${i}', NULL, "2022-01-01 12:14:15", "2022-01-01 12:14:15")`);
+        $("#sql").append(i == (100 - 1) ? ";<br><br>" : ",<br>");
+    }
 
     // order_products
 
