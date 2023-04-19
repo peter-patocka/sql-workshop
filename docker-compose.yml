@@ -25,5 +25,23 @@ services:
       MYSQL_USER: username
       MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: password
+    networks:
+      - default
+  server-api:
+    build:
+      context: ./
+      dockerfile: server-release.Dockerfile
+    container_name: server-api
+    restart: always
+    links:
+      - db:db
+    env_file:
+      - server/dev.env
+    volumes:
+      - "./server:/app"
+    ports:
+      - "8080:8080"
+    networks:
+      - default
 volumes:
   persistent:
